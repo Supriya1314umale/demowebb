@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ Section</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* ===== BODY BACKGROUND ===== */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to bottom, #f4efe6, #e6d8c5);
+        }
+
+        /* ===== WAVE ===== */
+        /* .wave svg {
+    display: block;
+    width: 100%;
+    height: 150px;
+} */
+
+        /* ===== SECTION ===== */
+        .process-section {
+            max-width: 900px;
+            margin: -80px auto 80px;
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ===== TITLE ===== */
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .faq-subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        /* ===== ACCORDION ===== */
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-question {
+            width: 100%;
+            padding: 18px 0;
+            background: none;
+            border: none;
+            font-size: 18px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #333;
+        }
+
+        .accordion-question span {
+            font-size: 22px;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-question.active span {
+            transform: rotate(45deg);
+            /* + becomes × */
+        }
+
+        .accordion-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .accordion-answer p {
+            padding: 10px 0 20px;
+            margin: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ===== WAVE ===== -->
+    <div class="wave">
+        <svg viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1"
+                d="M0,160L60,144C120,128,240,96,360,96C480,96,600,128,720,149.3C840,171,960,181,1080,176C1200,171,1320,149,1380,138.7L1440,128L1440,0L0,0Z">
+            </path>
+        </svg>
+    </div>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="process-section">
+        <h1 class="section-title">Frequently Asked Questions</h1>
+        <p class="faq-subtitle">
+            ForTherapists & Practitioners
+        </p>
+
+        <div class="accordion-container">
+
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    What is it like to work at The Open Window?
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        We prioritise ethical practice, sustainable workloads, and psychological safety. Supervision,
+                        support, and boundaries are built into how we work.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    How are caseloads managed?
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        Caseloads are designed with sustainability and clinical quality in mind. We prioritise realistic
+                        session loads, flexibility based on individual capacity, and protected time for documentation,
+                        reflection, and learning. Caseloads are reviewed regularly and adjusted when needed to prevent
+                        burnout and support ethical care.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    What does supervision look like?
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-answer">
+                    <p>
+                        Supervision is regular, structured, and clinically meaningful. It is a space for reflection,
+                        ethical decision-making, case discussion, and professional growth. Supervision is provided by
+                        experienced clinicians and treated as an essential part of practice.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    Is there room for different therapeutic orientations?
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        Yes. We support integrative practice and respect diverse therapeutic orientations. No single
+                        model is imposed, as long as the work is ethical, evidence-informed, and responsive to client
+                        needs.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    How do you support therapist wellbeing?
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        Therapist wellbeing is built into our systems rather than left to individual resilience. This
+                        includes manageable caseloads, flexibility, access to supervision, and a culture that respects
+                        boundaries, rest, and honest conversations about capacity.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    What happens if a clinician is struggling?
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        Struggle is recognised as part of human and clinical work, not as a failure. We encourage early
+                        conversations, offer additional supervision or support, and make adjustments where possible. The
+                        goal is care, containment, and sustainability, not performance or penalty.
+                    </p>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const questions = document.querySelectorAll(".accordion-question");
+
+            questions.forEach(question => {
+                question.addEventListener("click", function () {
+
+                    const answer = this.nextElementSibling;
+
+                    this.classList.toggle("active");
+
+                    if (answer.style.maxHeight) {
+                        answer.style.maxHeight = null;
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+
+                });
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

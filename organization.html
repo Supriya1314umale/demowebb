@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ Section</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* ===== BODY BACKGROUND ===== */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to bottom, #f4efe6, #e6d8c5);
+        }
+
+        /* ===== WAVE ===== */
+        /* .wave svg {
+    display: block;
+    width: 100%;
+    height: 150px;
+} */
+
+        /* ===== SECTION ===== */
+        .process-section {
+            max-width: 900px;
+            margin: -80px auto 80px;
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ===== TITLE ===== */
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .faq-subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        /* ===== ACCORDION ===== */
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-question {
+            width: 100%;
+            padding: 18px 0;
+            background: none;
+            border: none;
+            font-size: 18px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #333;
+        }
+
+        .accordion-question span {
+            font-size: 22px;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-question.active span {
+            transform: rotate(45deg);
+            /* + becomes × */
+        }
+
+        .accordion-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .accordion-answer p {
+            padding: 10px 0 20px;
+            margin: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ===== WAVE ===== -->
+    <div class="wave">
+        <svg viewBox="0 0 1440 320">
+            <path fill="#ffffff" fill-opacity="1"
+                d="M0,160L60,144C120,128,240,96,360,96C480,96,600,128,720,149.3C840,171,960,181,1080,176C1200,171,1320,149,1380,138.7L1440,128L1440,0L0,0Z">
+            </path>
+        </svg>
+    </div>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="process-section">
+        <h1 class="section-title">Frequently Asked Questions</h1>
+        <p class="faq-subtitle">
+            For Organisations
+        </p>
+
+        <div class="accordion-container">
+
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    How is your EAP different from standard offerings?
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        Our EAP services are clinically led, confidential, and thoughtfully designed. We prioritise
+                        quality of care, therapist wellbeing, and meaningful engagement over volume-based models.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    Do your leadership workshops go beyond awareness sessions?
+
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        Yes. Our trainings focus on skill-building, reflective capacity, and real workplace application,
+                        not just mental health literacy.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    How do you balance organisational goals with employee confidentiality?
+
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-answer">
+                    <p>
+                        Employee confidentiality is never compromised. We provide organisations with aggregated insights
+                        where appropriate, without sharing individual-level information.
+
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    What kinds of workplace challenges do you commonly support?
+
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        We work with stress, burnout, anxiety, interpersonal conflict, leadership strain, change
+                        fatigue, grief, and role-related distress, always within a clinical framework rather than
+                        generic coaching.
+
+
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    Do you offer support during organisational crises or critical incidents?
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        Yes. We provide crisis response support, stabilisation sessions, and follow-up care after
+                        critical incidents, restructuring, or periods of high organisational stress.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    How do you measure impact without compromising privacy?
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        We focus on qualitative outcomes, utilisation trends, and aggregated feedback rather than
+                        individual-level tracking. Impact is assessed ethically and responsibly.
+
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    How quickly can an organisation onboard with you?
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        Onboarding timelines depend on scale and customisation, but we prioritise clarity, ethical
+                        setup, and smooth rollout over speed alone.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    Do you offer preventive care or just crisis support?
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        Yes. Our model emphasises early intervention, reflective support, and sustainable wellbeing, not
+                        only crisis response.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const questions = document.querySelectorAll(".accordion-question");
+
+            questions.forEach(question => {
+                question.addEventListener("click", function () {
+
+                    const answer = this.nextElementSibling;
+
+                    this.classList.toggle("active");
+
+                    if (answer.style.maxHeight) {
+                        answer.style.maxHeight = null;
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+
+                });
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

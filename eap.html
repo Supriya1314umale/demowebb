@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Hub Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        /* ===== BODY BACKGROUND ===== */
+        /* body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to bottom, #f4efe6, #e6d8c5);
+        } */
+
+        /* ===== WAVE ===== */
+        /* .wave svg {
+    display: block;
+    width: 100%;
+    height: 150px;
+} */
+
+        /* ===== SECTION ===== */
+        .process-section {
+            /* max-width: 900px;
+            margin: -80px auto 80px;
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); */
+        }
+
+        /* ===== TITLE ===== */
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .faq-subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        /* ===== ACCORDION ===== */
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-question {
+            width: 100%;
+            padding: 18px 0;
+            background: none;
+            border: none;
+            font-size: 18px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #333;
+        }
+
+        .accordion-question span {
+            font-size: 22px;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-question.active span {
+            transform: rotate(45deg);
+            /* + becomes × */
+        }
+
+        .accordion-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .accordion-answer p {
+            padding: 10px 0 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BRAND HEADER -->
+    <header class="brand-header">
+        <h1 class="brand">Open Window</h1>
+        <p class="tagline">Mental Health</p>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="clinicalapp.html">CLINICAL APPROACH THAT WORKS</a></li>
+            <li><a href="setthestandard.html">SET THE STANDARD</a></li>
+            <!-- <li><a href="#">FOR COMPANIES</a></li> -->
+            <li><a href="eap.html">EAP</a></li>
+            <li><a href="#">TESTIMONIALS</a></li>
+
+            <!-- <li><a href="#">LOG IN</a></li>
+    <li><a href="#">LET'S START</a></li> -->
+        </ul>
+    </nav>
+
+    <!-- AUTH NAVBAR -->
+    <div class="auth-bar">
+
+        <button class="start-btn">REQUEST A DEMO</button>
+    </div>
+
+     <section class="process-section">
+        <h1 class="section-title">Trust is built when care is done right,not fast.</h1>
+        <p class="faq-subtitle">
+        
+        </p>
+
+        <div class="accordion-container">
+
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    Clinical rigour with real accessibility
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                       We combine robust clinical frameworks with ease of access, without compromising care or ethics.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    Clear standards and accountability
+                    <span>+</span>
+                </button>
+                <div class="accordion-answer">
+                    <p>
+                        Our work is guided by defined protocols, ethical practice, ongoing supervision, and measurable impact.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-question">
+                    Confidentiality and psychological safety at every level
+                    <span>+</span>
+                </button>
+
+                <div class="accordion-answer">
+                    <p>
+                        From leadership alignment to employee access, we prioritise trust, quality, and care across the entire organisation.
+                    </p>
+                </div>
+            </div>
+
+    <!-- <section class="services">
+        <p class="subtitle">
+            See how The Open Window partners with organisations to deliver ethical, clinically led
+            workplace mental health support.
+            <br></br>
+            Request a personalised demo to explore our Employee Assistance Programs, leadership training, and workplace
+             <br></br>
+            interventions, and understand how our approach integrates seamlessly into your organisation’s culture while
+             <br></br>
+            protecting confidentiality and psychological safety.</p>
+        <h1 class="title"> <em>  </em></h1> -->
+
+         <div class="auth-bar">
+
+        <button class="start-btn">REQUEST A DEMO</button>
+    </div>
+        </header>
+
+         <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const questions = document.querySelectorAll(".accordion-question");
+
+            questions.forEach(question => {
+                question.addEventListener("click", function () {
+
+                    const answer = this.nextElementSibling;
+
+                    this.classList.toggle("active");
+
+                    if (answer.style.maxHeight) {
+                        answer.style.maxHeight = null;
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+
+                });
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
